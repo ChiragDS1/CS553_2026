@@ -1,5 +1,5 @@
 # CS553 Distributed Algorithms Simulator
-**Student:** Chirag Shinde | UIN : 665236290
+**Student:** Chirag Shinde | **UIN** : 665236290
 **Course:** CS553 — Distributed Computing Systems, Spring 2026
 **Assigned Algorithms:** Echo Extinction Anonymous (Index 12) . Lai-Yang Global Snapshot (Index 23)
 **Submission:** April 18, 2026

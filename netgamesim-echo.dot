@@ -1,0 +1,21 @@
+digraph LaiYang {
+  rankdir=LR;
+  node [shape=circle];
+  "START" -> "node-0" [label="INIT", color="green"];
+  "node-0" -> "node-1" [label="WAVE", color="blue"];
+  "node-0" -> "node-3" [label="WAVE", color="blue"];
+  "node-0" -> "node-5" [label="WAVE", color="blue"];
+  "node-1" -> "node-2" [label="WAVE", color="blue"];
+  "node-3" -> "node-4" [label="WAVE", color="blue"];
+  "node-5" -> "node-6" [label="WAVE", color="blue"];
+  "node-4" -> "node-5" [label="WAVE", color="blue"];
+  "node-1" -> "node-4" [label="WAVE", color="blue"];
+  "node-2" -> "node-3" [label="WAVE", color="blue"];
+  "node-3" -> "node-6" [label="WAVE", color="blue"];
+  "node-2" -> "node-7" [label="WAVE", color="blue"];
+  "node-6" -> "node-1" [label="WAVE", color="blue"];
+  "node-4" -> "node-7" [label="WAVE", color="blue"];
+  "node-7" -> "node-0" [label="WAVE", color="blue"];
+  "node-6" -> "node-7" [label="WAVE", color="blue"];
+  "node-7" -> "node-3" [label="WAVE", color="blue"];
+}

@@ -1,26 +1,35 @@
-*.class
-*.log
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# SBT specific
+# sbt build outputs
 target/
 project/target/
 project/project/
-.bsp/
 
-# SBT installation (users should install SBT themselves)
-sbt/
-sbt-*.tgz
+# sbt build definition compilation
+project/project/target/
 
-# IDE
+# IDE — IntelliJ
 .idea/
-.vscode/
 *.iml
+*.ipr
+*.iws
+
+# IDE — VS Code / Metals
+.vscode/
 .metals/
 .bloop/
+
+# Scala worksheets
+*.sc
+
+# Generated DOT and PNG files (optional — comment out if you want to commit them)
+# *.dot
+# *.png
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs generated at runtime
+*.log
+
+# sbt credentials
+.credentials

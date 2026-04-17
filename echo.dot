@@ -1,0 +1,32 @@
+digraph LaiYang {
+  rankdir=LR;
+  node [shape=circle];
+  "START" -> "node-1" [label="INIT", color="green"];
+  "node-1" -> "node-2" [label="WAVE", color="blue"];
+  "node-1" -> "node-8" [label="WAVE", color="blue"];
+  "node-2" -> "node-3" [label="WAVE", color="blue"];
+  "node-8" -> "node-7" [label="WAVE", color="blue"];
+  "node-3" -> "node-4" [label="WAVE", color="blue"];
+  "node-7" -> "node-6" [label="WAVE", color="blue"];
+  "node-6" -> "node-5" [label="WAVE", color="blue"];
+  "node-4" -> "node-5" [label="WAVE", color="blue"];
+  "node-5" -> "node-4" [label="WAVE", color="blue"];
+  "node-5" -> "node-4" [label="EXT", color="orange"];
+  "node-4" -> "node-5" [label="EXT", color="orange"];
+  "node-5" -> "node-4" [style=dashed, label="closed"];
+  "node-4" -> "node-5" [style=dashed, label="closed"];
+  "node-4" -> "node-3" [label="ECHO", color="red"];
+  "node-5" -> "node-6" [label="ECHO", color="red"];
+  "node-4" -> "node-3" [style=dashed, label="closed"];
+  "node-5" -> "node-6" [style=dashed, label="closed"];
+  "node-3" -> "node-2" [label="ECHO", color="red"];
+  "node-3" -> "node-2" [style=dashed, label="closed"];
+  "node-6" -> "node-7" [label="ECHO", color="red"];
+  "node-6" -> "node-7" [style=dashed, label="closed"];
+  "node-2" -> "node-1" [label="ECHO", color="red"];
+  "node-2" -> "node-1" [style=dashed, label="closed"];
+  "node-7" -> "node-8" [label="ECHO", color="red"];
+  "node-7" -> "node-8" [style=dashed, label="closed"];
+  "node-8" -> "node-1" [label="ECHO", color="red"];
+  "node-8" -> "node-1" [style=dashed, label="closed"];
+}

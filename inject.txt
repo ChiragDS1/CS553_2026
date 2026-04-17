@@ -1,0 +1,29 @@
+# inject.txt — sample injection script for file-driven input node injection
+#
+# Format: <delayMs> <nodeId> <kind> <payload>
+#   delayMs  — milliseconds to wait before sending this command
+#   nodeId   — must match an input node declared in sim.traffic.inputs
+#   kind     — message type (must be allowed on at least one outgoing edge)
+#   payload  — arbitrary string payload
+#
+# Run with:
+#   sbt "runMain com.uic.cs553.distributed.examples.SimMain \
+#         --config conf/traffic-topology.conf \
+#         --algorithm traffic \
+#         --duration 15 \
+#         --inject-file inject.txt"
+
+# After 500ms: inject a PING into node-2
+500  node-2  PING  hello-from-driver
+
+# After another 750ms: inject a WORK item into node-3
+750  node-3  WORK  process-item-1
+
+# After another 500ms: inject a GOSSIP into node-2
+500  node-2  GOSSIP  rumour-42
+
+# After another 1000ms: inject another WORK into node-3
+1000 node-3  WORK  process-item-2
+
+# After another 500ms: final PING into node-2
+500  node-2  PING  goodbye-from-driver

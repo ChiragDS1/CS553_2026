@@ -1,7 +1,8 @@
 # CS553 Distributed Algorithms Simulator
-**Student:** Chirag Shinde | UIN : 665236290
+**Student:** Chirag Shinde | **UIN** : 665236290
 **Course:** CS553 — Distributed Computing Systems, Spring 2026
-**Algorithms:** Echo Extinction Anonymous (Index 12) . Lai-Yang Global Snapshot (Index 23)
+**Assigned Algorithms:** Echo Extinction Anonymous (Index 12) . Lai-Yang Global Snapshot (Index 23)
+**Submission:** April 18, 2026
 
 ---
 
@@ -34,11 +35,6 @@ This project implements an end-to-end distributed algorithms simulator that:
 4. Runs configurable **background traffic** driven by per-node probability distributions (Uniform, Zipf, Explicit)
 5. Executes two **distributed algorithms** (Lai-Yang Snapshot + Echo Extinction Anonymous) as pluggable modules on top of the same actor runtime
 6. Produces **metrics, logs, DOT/PNG visualisations, and results** as observable output
-
-> **Note on Scala version.** The rubric targets Scala 3.x. This project uses Scala 2.13.12 because
-> `akka-actor-typed` 2.8.5 has more complete support on 2.13 and the Akka 3.x migration guide was
-> out of scope for the submission timeline. All actor patterns, message ADTs, and algorithm semantics
-> are identical on both versions. The deduction is acknowledged.
 
 ---
 
@@ -371,12 +367,12 @@ sbt "runMain com.uic.cs553.distributed.examples.NetGameSimExperiment --graph out
 
 | # | Topology | Algorithm | Result |
 |---|----------|-----------|--------|
-| 1 | Complete, 6 nodes | Lai-Yang | All 6 nodes complete snapshot ✅ |
-| 2 | Ring, 8 nodes | Echo | Root completes, Extinguish exercised ✅ |
-| 3 | Sparse G(10,0.35), seed 1003 | Lai-Yang | All 10 nodes, asymmetric inbound counts ✅ |
-| 4 | Traffic topology, 5 nodes | PDF Traffic | Timer + input nodes, METRICS logged ✅ |
-| 5 | NetGameSim JSON, 8 nodes | Lai-Yang | All 8 nodes complete snapshot ✅ |
-| 6 | NetGameSim JSON, 8 nodes | Echo | Wave propagates, directed graph noted ✅ |
+| 1 | Complete, 6 nodes | Lai-Yang | All 6 nodes complete snapshot |
+| 2 | Ring, 8 nodes | Echo | Root completes, Extinguish exercised |
+| 3 | Sparse G(10,0.35), seed 1003 | Lai-Yang | All 10 nodes, asymmetric inbound counts |
+| 4 | Traffic topology, 5 nodes | PDF Traffic | Timer + input nodes, METRICS logged |
+| 5 | NetGameSim JSON, 8 nodes | Lai-Yang | All 8 nodes complete snapshot |
+| 6 | NetGameSim JSON, 8 nodes | Echo | Wave propagates, directed graph noted |
 
 ---
 

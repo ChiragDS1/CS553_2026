@@ -422,13 +422,13 @@ Wave propagated outward from node-0 to all 8 nodes and Extinguish paths fired co
 
 | # | Topology | Nodes | Edges | Algorithm | Result | Key Observation |
 |---|----------|-------|-------|-----------|--------|-----------------|
-| 1 | Complete, conf | 6 | 30 | Lai-Yang | ✅ All 6 complete `snapshot-6` | `inboundCount=5` exact on symmetric graph |
-| 2 | Ring, conf | 8 | 16 | Echo | ✅ Root completes `wave-1` | Extinguish at nodes 4+5, both paths covered |
-| 3 | Sparse G(10,0.35) seed 1003 | 10 | 32 | Lai-Yang | ✅ All 10 complete `snapshot-5` | node-5: 6 inbound closed correctly |
-| 4 | Traffic topology | 5 | 20 | PDF Traffic | ✅ Timers + inputs + METRICS | node-4 fixed=WORK, node-1 PDF respects weights |
-| 5 | Traffic topology | 5 | 20 | Traffic + injection | ✅ 5 injections delivered | `injected:` prefix confirms full routing path |
-| 6 | NetGameSim JSON | 8 | 18 | Lai-Yang | ✅ All 8 complete `snapshot-4` | Asymmetric directed topology handled |
-| 7 | NetGameSim JSON | 8 | 18 | Echo | ⚠️ Wave propagates, root incomplete | Directed graph blocks reply paths (expected) |
+| 1 | Complete, conf | 6 | 30 | Lai-Yang |  All 6 complete `snapshot-6` | `inboundCount=5` exact on symmetric graph |
+| 2 | Ring, conf | 8 | 16 | Echo |  Root completes `wave-1` | Extinguish at nodes 4+5, both paths covered |
+| 3 | Sparse G(10,0.35) seed 1003 | 10 | 32 | Lai-Yang |  All 10 complete `snapshot-5` | node-5: 6 inbound closed correctly |
+| 4 | Traffic topology | 5 | 20 | PDF Traffic |  Timers + inputs + METRICS | node-4 fixed=WORK, node-1 PDF respects weights |
+| 5 | Traffic topology | 5 | 20 | Traffic + injection |  5 injections delivered | `injected:` prefix confirms full routing path |
+| 6 | NetGameSim JSON | 8 | 18 | Lai-Yang |  All 8 complete `snapshot-4` | Asymmetric directed topology handled |
+| 7 | NetGameSim JSON | 8 | 18 | Echo |  Wave propagates, root incomplete | Directed graph blocks reply paths (expected) |
 
 ---
 
